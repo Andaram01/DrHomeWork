@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="FullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/blood</item>
+        <item name="colorAccent">@color/blood</item>
+        <item name="android:windowLayoutInDisplayCutoutMode" tools:targetApi="28">shortEdges</item>
+        <item name="android:textViewStyle">@style/TextViewStyle</item>
+        <item name="colorPrimaryDark" tools:targetApi="23">@color/white</item>
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="23">true</item>
+    </style>
+
+    <style name="TextViewStyle" parent="@android:style/Widget.DeviceDefault.TextView">
+        <item name="android:lineSpacingExtra">6sp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+
+    <style name="SplashTheme" parent="FullScreen">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+    </style>
+
+</resources>

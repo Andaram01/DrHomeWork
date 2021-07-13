@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="contentViewHolder"
+            type="com.dr.drhomework.main.adapter.MainContentAdapter.ContentViewHolder" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/contentCv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/external_margin16"
+        android:layout_marginEnd="@dimen/external_margin16"
+        android:onClick="@{contentViewHolder::onAnimClick}"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="@dimen/corner_radius8"
+        app:cardElevation="@dimen/elevation2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/contentLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/thumbCv"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="@dimen/zero_dp"
+                android:layout_marginTop="@dimen/external_margin16"
+                android:layout_marginEnd="@dimen/external_margin16"
+                android:layout_marginBottom="@dimen/external_margin16"
+                app:cardCornerRadius="@dimen/corner_radius8"
+                app:cardBackgroundColor="@color/gray_6"
+                app:cardElevation="@dimen/zero_dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="w, 1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <ImageView
+                    android:id="@+id/thumbIv"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/labelTv"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginStart="@dimen/external_margin16"
+                android:layout_marginTop="@dimen/external_margin16"
+                android:background="@drawable/gray_3_solid_oval"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size18"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="blog" />
+
+            <TextView
+                android:id="@+id/nameTv"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/external_margin8"
+                android:layout_marginEnd="@dimen/external_margin8"
+                android:singleLine="true"
+                android:textColor="@color/gray_1"
+                android:textSize="@dimen/text_size18"
+                app:layout_constraintBaseline_toBaselineOf="@id/labelTv"
+                app:layout_constraintEnd_toStartOf="@id/thumbCv"
+                app:layout_constraintStart_toEndOf="@id/labelTv"
+                tools:text="blogname" />
+
+            <TextView
+                android:id="@+id/titleTv"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/external_margin16"
+                android:layout_marginTop="@dimen/external_margin12"
+                android:layout_marginEnd="@dimen/external_margin8"
+                android:lines="2"
+                android:textColor="@color/gray_3"
+                android:textSize="@dimen/text_size12"
+                app:layout_constraintEnd_toStartOf="@id/thumbCv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/labelTv"
+                tools:text="blogText\nblogText" />
+
+            <TextView
+                android:id="@+id/dateTimeTv"
+                android:layout_width="@dimen/zero_dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/external_margin16"
+                android:layout_marginTop="@dimen/external_margin12"
+                android:layout_marginEnd="@dimen/external_margin8"
+                android:layout_marginBottom="@dimen/external_margin16"
+                android:singleLine="true"
+                android:textColor="@color/gray_3"
+                android:textSize="@dimen/text_size12"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/thumbCv"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/titleTv"
+                tools:text="blogText\nblogText" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</layout>
